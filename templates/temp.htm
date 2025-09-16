@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Part Details - QR Data</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 30px 40px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .detail-item {
+      margin: 15px 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .value {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.1em;
+      color: #222;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔧 Product Part Details</h2>
+
+    <div class="detail-item">
+      <span class="label">UID (ID):</span>
+      <span class="value">{{ data.id }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Part Type:</span>
+      <span class="value">{{ data.part_type }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Serial Number:</span>
+      <span class="value">{{ data.serial_no }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Vendor ID:</span>
+      <span class="value">{{ data.vendor_id }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Manufacturing Date:</span>
+      <span class="value">{{ data.mfg_date }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Lot Number:</span>
+      <span class="value">{{ data.lot_no }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Warranty Period:</span>
+      <span class="value">{{ data.warranty_period }}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="label">Record Created At:</span>
+      <span class="value">{{ data.time_stamp }}</span>
+    </div>
+
+    <div class="footer">
+      Powered by FitTrack · QR System v1.0 
+    </div>
+  </div>
+</body>
+</html>

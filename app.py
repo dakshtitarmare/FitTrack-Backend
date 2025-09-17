@@ -3,11 +3,13 @@ from dotenv import load_dotenv
 import os
 import uuid
 import requests
+from flask_cors import CORS
 
 # Load .env variables
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)  # allow all origins, or restrict
 
 # Supabase credentials
 SUPABASE_URL = os.getenv("SUPABASE_URL")
@@ -76,5 +78,5 @@ def get_qr_data(uid):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # fallback to 5000 for local
+    port = int(os.environ.get("PORT", 5001))  # fallback to 5000 for local
     app.run(host="0.0.0.0", port=port)
